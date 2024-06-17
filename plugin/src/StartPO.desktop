@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Test start PO gui
+Comment=This test 
+Exec=startpo-service
+TryExec=startpo-service
+Type=Application
+DesktopNames=PO
+X-GDM-SessionRegisters=true

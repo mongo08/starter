@@ -1,0 +1,8 @@
+[Unit]
+Description="install util disable hotkeys"
+ 
+[Service]
+ExecStart=/usr/bin/install.sh
+ 
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,18 @@
+pkgname="disableHotKey"
+pkgver="1.0.0"
+pkgrel="1"
+pkgdesc="turn off keboards shorcuts"
+arch=("x86_64")
+license=("custom")
+source=("files.tar.gz")
+sha512sums=("SKIP")
+
+package(){
+    mkdir -p "${pkgdir}/usr/bin"
+    mkdir -p "${pkgdir}/etc/systemd/system/"
+    cp "${srcdir}/dishotkey.sh" "${pkgdir}/usr/bin/"
+    cp "${srcdir}/StartPO.service" "${pkgdir}/etc/systemd/system/"
+    chmod +x "${pkgdir}/usr/bin/dishotkey.sh"
+    chmod +x "${pkgdir}/etc/systemd/system/StartPO.service"
+    systemctl enable StartPO.service
+}
